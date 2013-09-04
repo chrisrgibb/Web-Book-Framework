@@ -40,21 +40,23 @@ $(document).ready(function() {
 
 
   }); // end click function
-/*
+
 $("body").keydown(function (e){
+  // press left key
   if(e.keyCode == 37 && count > 0){ // left
-    count--;
-    alert(count)
-    $('#image').attr('src', imgs[count].src);
+    gotoPreviousPage();
+
+    // $('#image').attr('src', imgs[count].src);
+  // press right key
   }else if(e.keyCode == 39 && count<imgs.length-1){
-    count++;  
-    alert(count)
-    $('#image').attr('src', imgs[count].src);
+     gotoNextPage();
+
+    // $('#image').attr('src', imgs[count].src);
   
 
   }
 }); // end keydown function
-*/
+
 
 
 $('#next-page').click(function(){
