@@ -36,14 +36,9 @@ $(document).ready(function() {
 
   // Check for click to change picture
   $('#image').click(function(){
-    if (count<imgs.length-1){
-      count++;
-      $(this).attr('src', imgs[count].src);
-      
-    }
-    else{
-      alert('too far!!!');
-    }
+
+
+
   }); // end click function
 /*
 $("body").keydown(function (e){
@@ -61,48 +56,18 @@ $("body").keydown(function (e){
 }); // end keydown function
 */
 
-/*
-$("#yes-icon").hover(
-  function(){
-  $(this).attr('border', '5px solid red');
-  },
-  function(){
-  $(this).attr('border', 'none');
-  });// end yes icon hover
-$("#no-icon").hover(
-  function(){
-  $(this).attr('border', '5px solid red');
-  },
-  function(){
-  $(this).attr('border', 'none');
-  });// end no icon hover
-  
-*/
-console.log($('#image').width());
 
 $('#next-page').click(function(){
-  console.log("Next PAGE!!!");
-   if (count<imgs.length-1){
-      count++;
-      $('#image').attr('src', imgs[count].src);
-      console.log("count = " + count);
-    }
-    else{
-      alert('too far!!!');
-    }
-      if(count>=imgs.length-1){
-    nextPage$.hide();
-    }else{
-    nextPage$.show();
-  }
-
-    if(count>0){
-      previousPage$.show();
-    }
-
-});
+  gotoNextPage();
+}); // end next-page click function
 
 $('#previous-page').click(function() {
+  gotoPreviousPage();
+
+});  // end previous-page click function 
+
+
+function gotoPreviousPage(){
     console.log("clicked on yes!!!!");
    if (count>0){
       count--;
@@ -117,9 +82,29 @@ $('#previous-page').click(function() {
     }else if (count==0) {
     previousPage$.hide();
     }
+}
 
+function gotoNextPage(){
+  console.log("Next PAGE!!!");
+    if (count<imgs.length-1){
+      count++;
+      $('#image').attr('src', imgs[count].src);
+    }
+    else{
+      alert('too far!!!');
+    }
+      if(count>=imgs.length-1){
+    nextPage$.hide();
+    }else{
+    nextPage$.show();
+  }
 
-});
+    if(count>0){
+      previousPage$.show();
+    }
+
+}
+
 
   	
 }); // end ready
