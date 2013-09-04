@@ -1,0 +1,6 @@
+# Don't want to give away the images!!!!! #
+
+############
+*.jpg
+*.png
+.DS_Store
