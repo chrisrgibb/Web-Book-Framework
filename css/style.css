@@ -1,0 +1,35 @@
+
+
+
+#image{
+  left: 80px;
+
+}
+
+
+
+/* attributes for page turning buttons */
+
+#previous-page{
+   position: absolute;
+   top: 50px;
+   left: 50px;
+   z-index: 1000; 
+   opacity: 0.7;  
+}
+
+#next-page{
+   position: absolute;
+   top: 50px;
+   left: 900px;
+   z-index: 10;
+   opacity: 0.6;
+}
+
+#previous-page:hover{
+  opacity: 1;
+}
+
+#next-page:hover{
+  opacity: 1;
+}
